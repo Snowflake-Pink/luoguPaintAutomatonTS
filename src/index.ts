@@ -30,8 +30,8 @@ async function paint() {
         continue;
       }
     }
-    if (getTime() - users[0].lastPaintTime <= 31 * 1000) {
-      await sleep(31 * 1000 - (getTime() - users[0].lastPaintTime));
+    if (getTime() - users[0].lastPaintTime <= 11 * 1000) {
+      await sleep(11 * 1000 - (getTime() - users[0].lastPaintTime));
     }
     await users[0].paint(tasks[0]);
     users[0].lastPaintTime = getTime();
