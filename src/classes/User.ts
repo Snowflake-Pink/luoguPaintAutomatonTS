@@ -9,14 +9,14 @@ class User {
   private cookie!: ICookies;
   constructor(cookie: ICookies) {
     this.cookie = cookie;
-    this.lastPaintTime = (new Date()).valueOf() - 29 * 1000;
+    this.lastPaintTime = (new Date()).valueOf() - 9 * 1000;
   }
   public async paint({ point, color }: ITask) {
     const [x, y] = point;
     const cookie = request.cookie(
       `__client_id=${this.cookie.clientID}; _uid=${this.cookie.UID}`,
     );
-    const url = "https://www.luogu.org/paintBoard/paint";
+    const url = "https://www.luogu.com.cn/paintBoard";
     const res = JSON.parse(await request.post({
       form: {
         color: parseInt(color, 32),
