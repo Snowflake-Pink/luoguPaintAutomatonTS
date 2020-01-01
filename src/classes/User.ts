@@ -16,7 +16,7 @@ class User {
     const cookie = request.cookie(
       `__client_id=${this.cookie.clientID}; _uid=${this.cookie.UID}`,
     );
-    const url = "https://www.luogu.com.cn/paintBoard";
+    const url = "https://www.luogu.com.cn/paintBoard/board";
     const res = JSON.parse(await request.post({
       form: {
         color: parseInt(color, 32),

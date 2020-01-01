@@ -3,7 +3,7 @@ import ITask from "interfaces/Tasks";
 import * as request from "request-promise-native";
 import { Point2d } from "types/Point";
 async function getBoard(): Promise<string[]> {
-  const res = await request.get("https://www.luogu.com.cn/paintBoard");
+  const res = await request.get("https://www.luogu.com.cn/paintBoard/board");
   return res.split("\n");
 }
 
